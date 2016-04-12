@@ -111,14 +111,17 @@ This assignment will be graded via peer assessment.
 #cachematrix.R loaded to my git repository
 
 #This R code includes two functions:
-	* `makeCacheMatrix`
-	* `cacheSolve`
+	
+`makeCacheMatrix` and
+	
+`cacheSolve`
 
 
 
 ###checking my functions with an example
 
 >mat1 <- makeCacheMatrix(matrix(c(3,-7,5,2), 2, 2))
+
 >mat1$get()
 
 >mat1$getINV()
