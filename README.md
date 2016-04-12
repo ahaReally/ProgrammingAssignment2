@@ -106,14 +106,14 @@ This assignment will be graded via peer assessment.
 
 
 
-
 ### My Functions
 
->cachematrix.R loaded to my git repository
+#cachematrix.R loaded to my git repository
 
->This R code includes two functions:
+#This R code includes two functions:
 	* `makeCacheMatrix`
 	* `cacheSolve`
+
 
 
 ###checking my functions with an example
