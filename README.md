@@ -106,7 +106,7 @@ This assignment will be graded via peer assessment.
 
 ### My Functions
 
-
+<!-- -->
 
  makeCacheMatrix<- function(x = numeric()) {
         INV <- NULL
@@ -136,7 +136,7 @@ cacheSolve<- function(x, ...) {
 }
 
 
-###checking my functions with example
+###checking my functions with an example
 
 mat1 <- makeCacheMatrix(matrix(c(3,-7,5,2), 2, 2))
 mat1$get()
