@@ -103,3 +103,65 @@ In order to complete this assignment, you must do the following:
 ### Grading
 
 This assignment will be graded via peer assessment.
+
+### My Functions
+
+
+
+ makeCacheMatrix<- function(x = numeric()) {
+        INV <- NULL
+        set <- function(y) {
+                x <<- y
+                INV <<- NULL
+        }
+        get <- function() x
+        setINV <- function(invCal) INV <<- invCal
+        getINV <- function() INV
+        list(set = set, get = get,
+             setINV = setINV,
+             getINV = getINV)
+}
+
+
+cacheSolve<- function(x, ...) {
+        INV <- x$getINV()
+        if(!is.null(INV)) {
+                message("getting cached inverse of a matrix")
+                return(INV)
+        }
+        data <- x$get()
+        INV <- solve(data, ...)
+        x$setINV(INV)
+        INV
+}
+
+
+###checking my functions with example
+
+mat1 <- makeCacheMatrix(matrix(c(3,-7,5,2), 2, 2))
+mat1$get()
+     [,1] [,2]
+[1,]    3    5
+[2,]   -7    2
+
+mat1$getINV()
+NULL
+
+cacheSolve(mat1)
+           [,1]        [,2]
+[1,] 0.04878049 -0.12195122
+[2,] 0.17073171  0.07317073
+
+cacheSolve(mat1)
+getting cached inverse of a matrix
+           [,1]        [,2]
+[1,] 0.04878049 -0.12195122
+[2,] 0.17073171  0.07317073
+
+mat1$getINV()
+           [,1]        [,2]
+[1,] 0.04878049 -0.12195122
+[2,] 0.17073171  0.07317073
+
+
+
