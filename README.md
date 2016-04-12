@@ -108,34 +108,11 @@ This assignment will be graded via peer assessment.
 
 ### My Functions
 
-<!-- -->
+cachematrix.R loaded to my git repository
+This R code includes two functions:
+	`makeCacheMatrix`
+	`cacheSolve`
 
-> makeCacheMatrix<- function(x = numeric()) {
->	INV <- NULL
->	set <- function(y) {
-> 		x <<- y
->		INV <<- NULL
->}
->	get <- function() x
->	setINV <- function(invCal) INV <<- invCal
->	getINV <- function() INV
->	list(set = set, get = get,
->	     setINV = setINV,
->                 getINV = getINV)
->}
-
-
->	cacheSolve<- function(x, ...) {
->		INV <- x$getINV()
->		if(!is.null(INV)) {
->			message("getting cached inverse of a matrix")
->		      	return(INV)
->		}
->		data <- x$get()
->		INV <- solve(data, ...)
->		x$setINV(INV)
->		INV
->}
 
 
 ###checking my functions with an example
